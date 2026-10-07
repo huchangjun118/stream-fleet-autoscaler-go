@@ -1,0 +1,26 @@
+{
+  "minReplicas": 2,
+  "maxReplicas": 12,
+  "scaleUpThreshold": 0.75,
+  "scaleDownThreshold": 0.35,
+  "windowTicks": 3,
+  "scaleUpAfter": 2,
+  "scaleDownAfter": 3,
+  "scaleUpCooldownTicks": 2,
+  "scaleDownCooldownTicks": 4,
+  "drainTimeoutTicks": 10,
+  "opTimeoutTicks": 12,
+  "maxConcurrentOps": 2,
+  "maxInstancesPerScale": 2,
+  "rebalanceThreshold": 0.2,
+  "rebalanceCooldownTicks": 6,
+  "tickIntervalMs": 500,
+  "specs": {
+    "standard": 10,
+    "large": 25
+  },
+  "regions": [
+    { "name": "east", "weight": 2, "spec": "standard" },
+    { "name": "west", "weight": 1, "spec": "large", "slowTicks": 3 }
+  ]
+}
